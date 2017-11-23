@@ -19,7 +19,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback',
+      callbackURL:
+        'https://still-mesa-28039.herokuapp.com/auth/google/callback',
       proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
