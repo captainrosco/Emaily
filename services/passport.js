@@ -21,7 +21,6 @@ passport.use(
   new GoogleStrategy(
     {
       clientID: keys.googleClientID,
-
       clientSecret: keys.googleClientSecret,
       callbackURL: '/auth/google/callback',
       proxy: true
@@ -36,12 +35,5 @@ passport.use(
             .then(user => done(null, user));
         }
       });
-
-      googleClientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback'
-    },
-    accessToken => {
-      console.log(accessToken);
-    }
   )
 );
