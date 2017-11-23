@@ -14,8 +14,6 @@ passport.deserializeUser((id, done) => {
   });
 });
 
-const keys = require('../config/keys');
-
 passport.use(
   new GoogleStrategy(
     {
@@ -32,6 +30,7 @@ passport.use(
           new User({ googleId: profile.id })
             .save()
             .then(user => done(null, user));
+        }
       });
     }
   )
