@@ -1,5 +1,4 @@
 const express = require('express');
-<<<<<<< HEAD
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
@@ -21,12 +20,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-=======
-require('./services/passport');
-
-const app = express();
-
->>>>>>> 99f3035ac7b19b05c0a6205c80737e458aafe985
 require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
